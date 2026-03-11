@@ -4,7 +4,7 @@ let cy;
 
 let preyCaught = false;
 let eatPhase = 0;
-
+// global variables end here.
 function setup() {
   let canvas =createCanvas(800, 500);
   canvas.id("p5-canvas");
