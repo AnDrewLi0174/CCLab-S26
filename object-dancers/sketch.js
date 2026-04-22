@@ -45,11 +45,6 @@ class TrafficTwins {
     this.greenx = 0
     this.greeny = 0
     this.t = 0
-    
-
-    
-    
-    
   }
   update() {
     // update properties here to achieve
