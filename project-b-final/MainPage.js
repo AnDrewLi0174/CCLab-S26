@@ -8,8 +8,8 @@ function mousePressed() {
 
 class MainPage {
     constructor() {
-        this.textrecord = "";      // user input
-        this.displayText = "";     // what is shown in box
+        this.textrecord = "";      
+        this.displayText = "";    
 
         this.narratives = [
             "Oh hi! Welcome!",
@@ -47,11 +47,9 @@ class MainPage {
         this.drawButton();
     }
 
-    // ---------------------------
-    // INPUT HANDLING
-    // ---------------------------
+
     handleKeyPressed(k, code) {
-        // If narrative is running, ignore typing
+
         if (this.isNarrating) return;
 
         if (code == ENTER) {
@@ -70,11 +68,11 @@ class MainPage {
     this.isTyping = true;
 
     if (this.hasNarrated) {
-        // pick random convo
+
         let rand = floor(random(this.randomconvos.length));
         this.narratives = [this.randomconvos[rand]];
     } else {
-        // original narrative
+
         this.narratives = [
             "Oh hi! Welcome!",
             "I'm Artemis, and I look over this website",
@@ -97,13 +95,11 @@ class MainPage {
 
         if (mx > x && mx < x + w && my > y && my < y + h) {
             currentPage = sleepPage;
-            sleepPage.start();   // trigger loading animation
+            sleepPage.start();   
         }
     }
 
-    // ---------------------------
-    // DISPLAY ELEMENTS
-    // ---------------------------
+  
     titleDisplay() {
         fill(200);
         textAlign(CENTER);
@@ -147,9 +143,7 @@ class MainPage {
         text(textToShow, 0.2*width+10, height / 2 + 5);
     }
 
-    // ---------------------------
-    // NARRATIVE SYSTEM
-    // ---------------------------
+
     handleNarrative() {
         if (!this.isNarrating) return;
 

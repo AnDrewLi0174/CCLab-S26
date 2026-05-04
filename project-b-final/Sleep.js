@@ -27,12 +27,10 @@ class Sleep {
     animateDots() {
         this.frameCounter++;
 
-        // every ~20 frames update dots
         if (this.frameCounter % 20 == 0) {
-            this.dotCount = (this.dotCount + 1) % 4; // 0→3 loop
+            this.dotCount = (this.dotCount + 1) % 4; 
         }
 
-        // after ~20 seconds, finish loading
         if (this.frameCounter > 600) {
             this.isDone = true;
         }
